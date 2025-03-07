@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>สร้าง QR Code ด้วย JavaScript</title>
+  <!-- โหลดไลบรารี QRCode.js จาก CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>สร้าง QR Code ด้วย JavaScript</h2>
+  <!-- ฟอร์มสำหรับป้อนข้อความหรือ URL -->
+  <input type="text" id="text" placeholder="กรอกข้อความหรือ URL" style="width: 300px;">
+  <button onclick="generateQRCode()">สร้าง QR Code</button>
+  
+  <!-- ช่องสำหรับแสดง QR Code -->
+  <div id="qrcode"></div>
+  
+  <script>
+    function generateQRCode(){
+      // รับข้อความจาก input
+      const text = document.getElementById('text').value;
+      
+      // ตรวจสอบว่ามีข้อความหรือไม่
+      if(!text) {
+        alert("กรุณากรอกข้อความหรือ URL ก่อนสร้าง QR Code");
+        return;
+      }
+      
+      // ล้างเนื้อหาใน div หากมี QR Code อยู่แล้ว
+      document.getElementById('qrcode').innerHTML = "";
+      
+      // สร้าง QR Code ใหม่
+      new QRCode(document.getElementById("qrcode"), {
+          text: text,
+          width: 200,           // กำหนดความกว้างของ QR Code
+          height: 200,          // กำหนดความสูงของ QR Code
+          colorDark : "#000000",  // สีของ QR Code
+          colorLight : "#ffffff", // พื้นหลัง
+          correctLevel : QRCode.CorrectLevel.H // ระดับการแก้ไขข้อผิดพลาด (L, M, Q, H)
+      });
+    }
+  </script>
+</body>
+</html>

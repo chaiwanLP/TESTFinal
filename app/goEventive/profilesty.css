@@ -1,0 +1,127 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .profile-section {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .profile-picture {
+            width: 8rem;
+            height: 8rem;
+            background-color: #FFF8E7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .profile-picture img {
+            width: 6rem;
+            height: 6rem;
+        }
+        .profile-username {
+            background-color: #FFF8E7;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .personal-info {
+            flex-grow: 1;
+        }
+        .personal-info-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem 1rem;
+        }
+        .personal-info-grid span {
+            background-color: #e9ecef;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+        }
+        .activity-stats {
+            background-color: #FFF8E7;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .activity-stats h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .activity-stats .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .activity-stats .stat-item img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .activity-stats .stat-item span {
+            flex-grow: 1;
+        }
+        .recent-activities h3 {
+            background-color: #DEFF9E;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .recent-activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .activity-card {
+            background-color: #F5FFE2;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .activity-card img {
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .activity-card p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .activity-card .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+        .activity-card .buttons button {
+            background-color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #6c757d;
+        }

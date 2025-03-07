@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEventive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .background-green { background-color: #c4ea89; } 
+        .resized-image { width: 50px; height: auto; }
+        .content { flex: 1; }
+        footer { background-color: #c4ea89; padding: 10px 0; text-align: center; }
+        .container-custom { border-radius: 0.5rem; padding: 20px; }
+        .activity-recommendation { background-color: #c4ea89; border-radius: 0.5rem; padding: 20px; position: relative; height: 180px; }
+        .activity-recommendation .badge { position: absolute; top: 0; left: 0; background-color: #28a745; color: white; padding: 5px 10px; border-radius: 0.5rem 0 0.5rem 0; }
+        .create-activity-section { background-color: #e5f4bb; border-radius: 0.5rem; padding: 20px; margin-top: 20px; }
+        .search-box { background-color: #e5f4bb; border-radius: 0.5rem; padding: 20px; margin-top: 20px; }
+        .card-custom { background-color: #ffffff; border-radius: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s; }
+        .card-custom:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-2 background-green">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="/login">
+                    <img class="resized-image me-2" src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck">
+                    <h4 class="m-0">GoEventive</h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-black mx-2" href="/activity">หน้าแรก</a></li>
+                        <li class="nav-item"><a class="nav-link text-black mx-2" href="/login">เข้าสู่ระบบ</a></li>
+                        <li class="nav-item"><a class="nav-link text-black mx-2" href="/create_activity.html">สร้างกิจกรรม</a></li>
+                        <li class="nav-item"><a class="nav-link text-black mx-2" href="/profile">โปรไฟล์</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container container-custom mt-4 mb-3">
+        <div class="row">
+            <div class="text-center mt-3">
+                <div class="activity-recommendation p-4 rounded" >
+                    <div class="badge">กิจกรรมแนะนำ</div>
+                    <div class="mt-4">📷 <span class="text-muted">พื้นที่แสดงกิจกรรม</span></div>
+                </div>
+                <div class="mt-2">
+                    <span>⬤</span>
+                    <span>⬤</span>
+                    <span>⬤</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 mb-4">
+            <h2>ร่วมสร้างกิจกรรมวันนี้ ...</h2>
+            <button class="btn btn-warning px-4 py-2 mt-2">สร้างกิจกรรมของคุณ</button>
+        </div>
+        <div class="search-box mb-4">
+            <h2 class="text-center">ค้นหากิจกรรมที่ใช่ สำหรับคุณ...</h2>
+            <div class="row g-2 mt-3">
+                <div class="col-md-4"><input type="text" class="form-control" placeholder="ชื่อ..."></div>
+                <div class="col-md-3"><input type="date" class="form-control"></div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option>หมวดหมู่</option>
+                        <option>กีฬา</option>
+                        <option>ดนตรี</option>
+                        <option>เรียนรู้</option>
+                    </select>
+                </div>
+                <div class="col-md-2"><button class="btn btn-warning w-100">ค้นหา</button></div>
+            </div>
+        </div>
+        <div class="row text-center justify-content-center" style="background-color: #c4ea89;">
+            <h4 class="activity-title col-md-3 mt-4 mb-4">กิจกรรม</h4>
+        </div>
+        <div class="row"style="background-color:  #c4ea89;">
+                <div class="col-md-4 mb-3">
+                    <div class="card card-custom border-0">
+                        <div class="card-body text-center">
+                            <div class="bg-light p-4 rounded mb-2">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck" class="img-fluid">
+                            </div>
+                            <p class="card-text">
+                                <span class="badge bg-success">🏷️ หมวดหมู่</span>
+                                <span class="badge bg-info">📅 วันที่</span>
+                            </p>
+                            <button class="btn btn-outline-success w-100">รายละเอียด</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card card-custom border-0">
+                        <div class="card-body text-center">
+                            <div class="bg-light p-4 rounded mb-2">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck" class="img-fluid">
+                            </div>
+                            <p class="card-text">
+                                <span class="badge bg-success">🏷️ หมวดหมู่</span>
+                                <span class="badge bg-info">📅 วันที่</span>
+                            </p>
+                            <button class="btn btn-outline-success w-100">รายละเอียด</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card card-custom border-0">
+                        <div class="card-body text-center">
+                            <div class="bg-light p-4 rounded mb-2">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck" class="img-fluid">
+                            </div>
+                            <p class="card-text">
+                                <span class="badge bg-success">🏷️ หมวดหมู่</span>
+                                <span class="badge bg-info">📅 วันที่</span>
+                            </p>
+                            <button class="btn btn-outline-success w-100">รายละเอียด</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card card-custom border-0">
+                        <div class="card-body text-center">
+                            <div class="bg-light p-4 rounded mb-2">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck" class="img-fluid">
+                            </div>
+                            <p class="card-text">
+                                <span class="badge bg-success">🏷️ หมวดหมู่</span>
+                                <span class="badge bg-info">📅 วันที่</span>
+                            </p>
+                            <button class="btn btn-outline-success w-100">รายละเอียด</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card card-custom border-0">
+                        <div class="card-body text-center">
+                            <div class="bg-light p-4 rounded mb-2">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck" class="img-fluid">
+                            </div>
+                            <p class="card-text">
+                                <span class="badge bg-success">🏷️ หมวดหมู่</span>
+                                <span class="badge bg-info">📅 วันที่</span>
+                            </p>
+                            <button class="btn btn-outline-success w-100">รายละเอียด</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card card-custom border-0">
+                        <div class="card-body text-center">
+                            <div class="bg-light p-4 rounded mb-2">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck" class="img-fluid">
+                            </div>
+                            <p class="card-text">
+                                <span class="badge bg-success">🏷️ หมวดหมู่</span>
+                                <span class="badge bg-info">📅 วันที่</span>
+                            </p>
+                            <button class="btn btn-outline-success w-100">รายละเอียด</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-secondary">◀</button>
+            <span class="mx-2">หน้า <strong>1</strong> 🟢 2</span>
+            <button class="btn btn-outline-secondary">▶</button>
+        </div>
+    </div>
+    <footer class="py-2 ">
+        <div class="container text-center">
+            <hr>
+            <p>&copy; date("Y");GoEventive.</p>
+        </div>
+    </footer>
+</body>
+</html>

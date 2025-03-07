@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEventive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .background-green { background-color: #c4ea89; } 
+        .resized-image { width: 50px; height: auto; }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-container .form-group {
+            margin-bottom: 15px;
+        }
+        .form-container .form-control {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px; 
+            padding: 10px; 
+        }
+        .form-container .form-control:focus {
+            background-color: #e0e0e0;
+            border-color: #999; 
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group .btn {
+            flex: 1; 
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .content {
+            flex: 1;
+        }
+    
+        footer {
+            background-color: #c4ea89; 
+            padding: 10px 0; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-2 background-green">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="/login">
+                    <img class="resized-image me-2" src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="Duck">
+                    <h4 class="m-0">GoEventive</h4>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-black mx-2" href="/activity">หน้าแรก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black mx-2" href="/login">เข้าสู่ระบบ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black mx-2" href="/create_activity">สร้างกิจกรรม</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black mx-2" href="/profile">โปรไฟล์</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mt-5">
+        <div class="form-container shadow">
+            <h2 class="text-center mb-4">สร้างกิจกรรม</h2>
+            <form action="process_form.php" method="post" enctype="multipart/form-data">
+
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="activity-image">เลือกรูปกิจกรรม:</label>
+                        <input type="file" class="form-control" id="activity-image" name="activity-image" accept="image/*" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label for="activity-name">ชื่อกิจกรรม:</label>
+                        <input type="text" class="form-control" id="activity-name" name="activity-name" placeholder="เขียนชื่อกิจกรรม..." required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity-details">รายละเอียด:</label>
+                    <textarea class="form-control" id="activity-details" name="activity-details" rows="4" placeholder="เขียนรายละเอียดของกิจกรรม..." required></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label for="start-date">วันที่เริ่ม:</label>
+                        <input type="date" class="form-control" id="start-date" name="start-date" required>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="end-date">วันที่จบ:</label>
+                        <input type="date" class="form-control" id="end-date" name="end-date" required>
+                    </div>
+                     
+                    <div class="col-md-3 form-group">
+                        <label for="time-period">ช่วงเวลา:</label>
+                        <input type="time" class="form-control" id="time-period" name="time-period" required>
+                    </div>
+    
+                    <div class="col-md-3 form-group">
+                        <label for="participant-limit">จำนวนที่รับ:</label>
+                        <input type="number" class="form-control" id="participant-limit" name="participant-limit" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">สถานที่:</label>
+                    <textarea class="form-control" id="location" name="location" rows="4" placeholder="เขียนสถานที่จัด..." required></textarea>
+                </div>
+                
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-md-6">
+                        <label for="activity-type">ประเภทกิจกรรม:</label>
+                        <select class="form-control" id="activity-type" name="activity-type" required>
+                            <option value="">เลือก...</option>
+                            <option value="sport">กีฬา</option>
+                            <option value="education">การศึกษา</option>
+                            <option value="culture">วัฒนธรรม</option>
+                            <option value="other">อื่นๆ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group button-group d-flex justify-content-center gap-3 mt-4">
+                    <button type="reset" class="btn btn-danger" style="width: 200px;">ยกเลิก</button>
+                    <button type="submit" class="btn btn-success" style="width: 200px;">สร้าง</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="py-2">
+        <div class="container text-center">
+            <hr>
+            <p>&copy; <?php echo date("Y"); ?> GoEventive.</p>
+        </div>
+    </footer>
+</body>
+</html>

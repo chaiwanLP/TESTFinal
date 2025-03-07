@@ -1,0 +1,93 @@
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .split-background {
+            position: relative;
+            min-height: 100vh;
+        }
+        .split-background .top {
+            height: 10rem;
+            background-color: #CBEA8B;
+        }
+        .split-background .bottom {
+            height: calc(100vh - 10rem);
+            background-color: white;
+        }
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 2rem;
+        }
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            background-color: #FFF7CD;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -2rem;
+        }
+        
+        .form-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 36rem;
+        }
+        .form-field {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .form-field span {
+            width: 8rem;
+            font-size: 1rem;
+            color: #4a5568;
+            
+        }
+        .form-field div {
+            flex-grow: 1;
+            background-color: #E8E8E8;
+            border-radius: 0.5rem;
+            
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+        .btn-custom-yellow {
+            background-color: #F7F5D2;
+            color: #4a5568;
+            border: none;
+            border-radius: 9999px;
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        .btn-custom-yellow:hover {
+            background-color: #F5F391;
+        }
+        .btn-custom-pink {
+            background-color: #FFD6D6;
+            color: #4a5568;
+            border: none;
+            border-radius: 9999px;
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        .btn-custom-pink:hover {
+            background-color: #FFCACA;
+        }
+        div{
+            border-color: #463b3b; 
+
+        }

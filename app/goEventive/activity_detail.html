@@ -1,0 +1,233 @@
+<?php
+?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .square-white{
+            background-color: white;
+            height: 250px;
+            width: 400px;
+            border-radius: 30px;
+        }
+        .square-detail{
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            height: 500px;
+        }
+        .bt-detail {
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        border: transparent;
+      }
+      .bt-detail.active {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: transparent;
+      }
+    </style>
+</head>
+    <body class="background-green">
+        <div class="container mb-1">
+            <ul class="nav justify-content-end">
+                <li class="nav-item mt-1">
+                    <a class="nav-link text-black mx-1" href="#">หน้าแรก</a>
+                </li>
+                <li class="nav-item mt-1">
+                    <a class="nav-link text-black mx-1" href="#">เข้าสู่ระบบ</a>
+                </li>
+                <li class="nav-item mt-1">
+                    <a class="nav-link text-black mx-1" href="#">สร้างกิจกรรม</a>
+                </li>
+                <li class="nav-item mt-1">
+                    <a class="nav-link text-black mx-1" href="#">โปรไฟล์</a>
+                </li>
+            </ul>
+            <div class="row">
+            <div class="col-1 d-flex align-items-center">
+            <img class="resized-image" src="https://static.vecteezy.com/system/resources/thumbnails/008/508/310/small/bath-yellow-rubber-duck-on-isolate-background-png.png" alt="">
+            </div>
+            <div class="col-9 d-flex align-items-center">
+            <h4 class="inter-font">GoEventive</h4>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 search-input" type="search" placeholder="ค้นหากิจกรรม" aria-label="Search">
+            </form>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center ">
+                <button id="id-bt-1" class="bt-detail mx-2">รายละเอียด</button>
+                <button id="id-bt-2" class="bt-detail mx-2">สมาชิก</button>
+            </div>
+            </div>
+        </div>
+        
+        <div class="container " id="content-box">
+            <div class="row m-4" ">
+                <div  class="col-6 d-flex justify-content-center align-items-center ">
+                    <div>
+                        <img class="square-white" src="https://www.techsmith.com/blog/wp-content/uploads/2023/08/What-are-High-Resolution-Images.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <div class="mx-2" style="height:30px">
+                            <h5 >กิจกรรม ที่5</h5>
+                        </div>
+                        <div style="height:140px">
+                            <p> ปลูกต้นไม้ ฟื้นฟูพื้นที่สีเขียว ลดปัญหาภาวะโลกร้อน
+                                เก็บขยะและคัดแยกขยะ ร่วมกันทำความสะอาด
+                                พื้นที่สาธารณะ และสอนวิธีคัดแยกขยะอย่างถูกต้อง
+                                เวิร์กช็อปรีไซเคิล แปรรูปขยะให้เป็นของใช้ใหม่ 
+                            </p>
+                        </div>
+                        <div style="height:140px">
+                            <label class="form-label mt-3" for="">สถานที่</label>
+                            <input type="text" class="form-control mt-1" name="name" id="name" value="XXXXXX" disabled style="width: 250px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="form-group d-flex align-items-center gap-2 mx-3">
+                        <label class="form-label m-0" for="">วันที่</label>
+                        <input type="text" class="form-control mt-1 text-center" name="name" id="name" value="1 มกราคม 2568 - 3 มกราคม 2568" disabled style="width: 260px;">
+                    </div>
+                    <div class="form-group d-flex align-items-center gap-2 mx-3">
+                        <label class="form-label m-0" for="">เวลา</label>
+                        <input type="text" class="form-control mt-1 text-center" name="name" id="name" value="16:00" disabled style="width: 150px;">
+                    </div>
+                    <div class="form-group d-flex align-items-center gap-2 mx-3">
+                        <label class="form-label m-0" for="">จำนวนที่รับ</label>
+                        <input type="text" class="form-control mt-1 text-center" name="name" id="name" value="XX" disabled style="width: 150px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-light rounded-4">สมัครเข้าร่วม</button>
+                    <button class="btn btn-light rounded-4">เช็คชื่อ</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <script>
+            document.querySelectorAll('.bt-detail').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.bt-detail').forEach(btn => btn.classList.remove('active'));
+                
+                this.classList.add('active');
+
+                const buttonId = this.id;
+
+                const contentBox = document.getElementById('content-box');
+
+                if (buttonId === "id-bt-1") {
+                    contentBox.innerHTML = `
+                    <div class="row m-4" ">
+                        <div  class="col-6 d-flex justify-content-center align-items-center ">
+                            <div>
+                                <img class="square-white" src="https://www.techsmith.com/blog/wp-content/uploads/2023/08/What-are-High-Resolution-Images.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <div class="mx-2" style="height:30px">
+                                    <h5 >กิจกรรม ที่1</h5>
+                                </div>
+                                <div style="height:140px">
+                                    <p> ปลูกต้นไม้ ฟื้นฟูพื้นที่สีเขียว ลดปัญหาภาวะโลกร้อน
+                                        เก็บขยะและคัดแยกขยะ ร่วมกันทำความสะอาด
+                                        พื้นที่สาธารณะ และสอนวิธีคัดแยกขยะอย่างถูกต้อง
+                                        เวิร์กช็อปรีไซเคิล แปรรูปขยะให้เป็นของใช้ใหม่ 
+                                    </p>
+                                </div>
+                                <div style="height:140px">
+                                    <label class="form-label mt-3" for="">สถานที่</label>
+                                    <input type="text" class="form-control mt-1" name="name" id="name" value="XXXXXX" disabled style="width: 250px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <div class="form-group d-flex align-items-center gap-2 mx-3">
+                                <label class="form-label m-0" for="">วันที่</label>
+                                <input type="text" class="form-control mt-1 text-center" name="name" id="name" value="1 มกราคม 2568 - 3 มกราคม 2568" disabled style="width: 260px;">
+                            </div>
+                            <div class="form-group d-flex align-items-center gap-2 mx-3">
+                                <label class="form-label m-0" for="">เวลา</label>
+                                <input type="text" class="form-control mt-1 text-center" name="name" id="name" value="16:00" disabled style="width: 150px;">
+                            </div>
+                            <div class="form-group d-flex align-items-center gap-2 mx-3">
+                                <label class="form-label m-0" for="">จำนวนที่รับ</label>
+                                <input type="text" class="form-control mt-1 text-center" name="name" id="name" value="XX" disabled style="width: 150px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="d-flex justify-content-center gap-2">
+                            <button class="btn btn-light rounded-4">สมัครเข้าร่วม</button>
+                            <button class="btn btn-light rounded-4">เช็คชื่อ</button>
+                        </div>
+                    </div>
+                    `;
+                } else if (buttonId === "id-bt-2") {
+                    const requests = [
+                        { name: 'คนที่ 1' },
+                        { name: 'คนที่ 2' },
+                        { name: 'คนที่ 3' },
+                        { name: 'คนที่ 4' },
+                        { name: 'คนที่ 5' },
+                        { name: 'คนที่ 6' },
+                        { name: 'คนที่ 7' }
+                    ];
+                    const create_event = [
+                        { name: 'เจ้าของ event' },
+                    ];
+                    
+
+                    let requestListHTML = `<div class="row m-4">
+                                            <div class="square-detail p-4"  style="overflow-y: auto;">
+                                            <h5 class="text-end p-3">คำขอทั้งหมด ${requests.length} คน</h5>
+                                            <div class="text-start">
+                                                    <p class="fs-5 mx-4">ผู้สร้างกิจกรรม</p>
+                                            </div>
+                                            <div class="row m-4 d-flex justify-content-center">
+                                                <div class="text-start">
+                                                    <p class="fs-5">${create_event[0].name}</p>
+                                                </div>
+                                            </div>
+                                            <p class="fs-5 mx-4">สมาชิก</p>
+                                            `;
+                    requestListHTML += '<div class="row m-4 d-flex justify-content-center">';
+                    requests.forEach(request => {
+                        requestListHTML += `
+                            <div class="text-start">
+                                <p class="fs-5">${request.name}</p>
+                            </div>
+                        `;
+                    });
+                    
+                    requestListHTML += '</div>';
+                    contentBox.innerHTML = requestListHTML;
+                }
+            });
+        });
+        </script>
+    </body>
+</html>
