@@ -21,7 +21,7 @@ services:
       MYSQL_USER: Final_Web_Project
       MYSQL_PASSWORD: Final_Web_Project662025
     ports:
-      - "3300:3300"
+      - "5432:3300"
     volumes:
       - db_data:/var/lib/mysql
 

@@ -2,10 +2,10 @@
 
 function getConnection():mysqli
 {
-    $hostname = 'db';
-    $dbName = 'event_management';
-    $username = 'Final_Web_Project';
-    $password = 'Final_Web_Project662025';
+    $hostname = 'dpg-cv5jd4i3esus73emdqn0-a';
+    $dbName = 'event_management_ebim';
+    $username = 'final_web_project';
+    $password = 'jJTAEJ1WJf2wRV4c7TvF8owsEDEMd372';
     $conn = new mysqli($hostname, $username, $password, $dbName);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
